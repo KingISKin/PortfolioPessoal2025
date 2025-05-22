@@ -28,9 +28,8 @@ html {
   --maisEscuro: #0a0f1c;
   --claro: #e2e8f0;
   --vidro: rgba(255, 255, 255, 0.1);
-  --botao: #240D59;
-  --botao2: #4A4A4A;
-
+  --botao: #240d59;
+  --botao2: #4a4a4a;
 }
 
 body {
@@ -53,7 +52,6 @@ body {
   );
   backdrop-filter: blur(5px);
 }
-
 
 .menu {
   display: flex;
@@ -141,10 +139,8 @@ h1 {
   line-height: 1.6;
   margin-bottom: 1rem;
   color: white; /* Texto branco */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
 
 .projetos {
   padding: 6rem 2rem;
@@ -290,3 +286,79 @@ h1 {
   }
 }
 
+@media screen and (max-width: 357px) {
+  .navegacao .menu {
+    gap: 8px; /* diminui o espaço entre os itens */
+  }
+  .navegacao .menu-link {
+    font-size: 0.8rem;
+    padding: 4px 2px;
+  }
+  .foto-perfil {
+    width: 250px;
+    height: 250px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .cabecalho-sub-titulo {
+    font-size: 1.6rem;
+  }
+  .projetos-titulo,
+  .contatos-titulo,
+  .sobre-titulo {
+    font-size: 2rem;
+  }
+  .sobre-caixa {
+    font-size: small;
+  }
+  .projetos-caixa,
+  .sobre-caixa,
+  .formulario-contato {
+    max-width: 300px;
+  }
+
+  #sobre,
+  #projetos,
+  #contatos {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 295) {
+  .navegacao .menu {
+    gap: 6px; /* diminui o espaço entre os itens */
+  }
+  .navegacao .menu-link {
+    font-size: 0.6rem;
+    padding: 3px 1px;
+  }
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  .cabecalho-sub-titulo {
+    font-size: 1rem;
+  }
+  .projetos-titulo,
+  .contatos-titulo,
+  .sobre-titulo {
+    font-size: 1rem;
+  }
+  .sobre-caixa {
+    font-size: small;
+  }
+  .projetos-caixa,
+  .sobre-caixa,
+  .formulario-contato {
+    max-width: 70px;
+  }
+  #sobre,
+  #projetos,
+  #contatos {
+    padding: 10px 0;
+  }
+}

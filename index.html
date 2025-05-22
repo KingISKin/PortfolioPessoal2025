@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="./img/crow.png" />
+
+  <title>João V. Portfólio</title>
+</head>
+
+<body>
+  <div class="particulas"></div>
+  <nav class="navegacao">
+    <ul class="menu">
+      <li>
+        <a href="#inicio" class="menu-link">Início</a>
+      </li>
+      <li>
+        <a href="#sobre" class="menu-link">Sobre</a>
+      </li>
+      <li>
+        <a href="#projetos" class="menu-link">Projetos</a>
+      </li>
+      <li>
+        <a href="#contatos" class="menu-link">Contato</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="inicio" class="cabecalho">
+    <a href="https://www.linkedin.com/in/joão-victor-nunes1/" target="_blank">
+      <img src="./img/JoaoV.jpg" alt="Foto JoaoV" class="foto-perfil" />
+    </a>
+    <h1>João Santos</h1>
+    <p class="cabecalho-sub-titulo">Desenvolvedor FullStack</p>
+  </main>
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Sobre Mim</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        Meu nome é João Victor, tenho 22 anos e sou desenvolvedor fullstack com 5 anos de experiência no mercado. Tenho
+        domínio em tecnologias front-end como HTML, CSS e JavaScript (ES6+), utilizando frameworks modernos como React
+        para criar interfaces responsivas e eficientes. No back-end, trabalho com Node.js e Express, construindo APIs
+        RESTful robustas e seguras, além de experiência com bancos de dados relacionais (PostgreSQL, MySQL) e NoSQL
+        (MongoDB).
+      </p>
+
+      <p class="sobre-paragrafo">
+        Também sou familiarizado com práticas essenciais de DevOps, como controle de versão com Git, containerização com
+        Docker e deploy em plataformas cloud. Busco sempre aplicar boas práticas de desenvolvimento, testes
+        automatizados e arquitetura limpa para entregar soluções escaláveis e de alta qualidade, alinhadas às
+        necessidades do negócio.
+      </p>
+
+    </div>
+  </section>
+
+  <section id="projetos" class="projetos">
+    <h2 class="projetos-titulo">Meus Projetos</h2>
+    <div class="projetos-caixa">
+      <a href="https://seulink.com" target="_blank" class="projetos-card">
+        <img src="./img/img1.png" alt="Projeto 1" class="projetos-imagem" />
+        <h3 class="info-projetos">Car Wiki</h3>
+        <div class="caixa-textos-projeto">
+          <p class="paragrafo-projetos">
+            Projeto criado como exemplo de página de vendas, dados e até de
+            mostruário de produtos. Clique para ver mais!
+          </p>
+        </div>
+      </a>
+    </div>
+    </div>
+  </section>
+
+  <section id="contatos" class="contatos">
+    <h2 class="contatos-titulo">Entre em contato</h2>
+    <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+      <div class="grupo-form">
+        <input placeholder="Nome" class="campo-form" id="nome" />
+      </div>
+
+      <div class="grupo-form">
+        <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem" rows="4"></textarea>
+      </div>
+      <button type="submit" class="botao-form">Enviar para Whatsapp</button>
+    </form>
+  </section>
+  <script>
+    function enviarWhats(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById("nome").value;
+      const mensagem = document.getElementById("mensagem").value;
+      const telefone = "5511989581698";
+
+      const texto = `Olá, me chamo ${nome}, ${mensagem}`;
+      const msgFormatada = encodeURIComponent(texto);
+
+      const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+
+</html>

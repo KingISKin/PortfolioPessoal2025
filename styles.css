@@ -35,14 +35,9 @@ html {
   scroll-behavior: smooth;
 }
 
-#sobre {
-  padding: 180px 0;
-}
-
-#projetos {
-  padding: 180px 0;
-}
-
+#sobre,
+#projetos,
+#experience,
 #contatos {
   padding: 180px 0;
 }
@@ -59,10 +54,12 @@ body {
   z-index: 100;
   padding: 1.5rem;
 
-  background: linear-gradient(to bottom,
-      rgba(15, 23, 42, 0.9) 0%,
-      rgba(15, 23, 42, 0.7) 50%,
-      rgba(15, 23, 42, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.9) 0%,
+    rgba(15, 23, 42, 0.7) 50%,
+    rgba(15, 23, 42, 0) 100%
+  );
   backdrop-filter: blur(5px);
 }
 
@@ -70,7 +67,6 @@ body {
   background: none;
   backdrop-filter: none;
 }
-
 
 .menu {
   display: flex;
@@ -114,10 +110,19 @@ body {
 .foto-perfil {
   width: 350px;
   height: 350px;
-  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
   border-radius: 50%;
-  border: 4px solid var(--vidro);
+  border: 4px solid #6b4b9b;
+  box-shadow: 0 0 10px #6b4b9b;
   animation: flutuar 2s ease-in-out infinite;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #7a57b8, 0 0 25px #7a57b8, 0 0 35px #8c6bc5; /* brilho roxo suave */
+  border-color: #7a57b8;
+  filter: brightness(0.85);
 }
 
 h1 {
@@ -208,6 +213,7 @@ h1 {
 }
 
 .info-projetos {
+  margin-top: 10px;
   margin-bottom: 5px;
   text-align: center;
   color: var(--letras);
@@ -291,9 +297,11 @@ h1 {
   height: 100%;
   z-index: -1;
   opacity: 0.5;
-  background: radial-gradient(circle at 10% 10%,
+  background: radial-gradient(
+      circle at 10% 10%,
       var(--primaria) 0%,
-      transparent 20%),
+      transparent 20%
+    ),
     radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
     radial-gradient(circle at 70% 40%, var(--primaria) 0%, transparent 20%),
     radial-gradient(circle at 30% 80%, var(--secundaria) 0%, transparent 20%),
@@ -315,7 +323,6 @@ h1 {
   opacity: 1;
   background-image: radial-gradient(#ffffff, #4a4a4a);
 }
-
 
 .wrapper {
   display: inline-flex;
@@ -418,22 +425,20 @@ h1 {
   box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
   transition: all 0.5s ease;
 
+  .icon-wrapper {
+    display: inline-flex;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
 
-.icon-wrapper {
-  display: inline-flex;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.icon-wrapper.exiting {
+  .icon-wrapper.exiting {
     transform: rotate(180deg) scale(0.5);
     opacity: 0;
-}
+  }
 
-.icon-wrapper.entering {
+  .icon-wrapper.entering {
     transform: rotate(0deg) scale(1);
     opacity: 1;
-}
-
+  }
 }
 
 svg {
@@ -442,8 +447,22 @@ svg {
   height: 24px;
 }
 
-@keyframes flutuar {
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #fff; /* texto branco */
 
+  background: radial-gradient(
+    ellipse at center,
+    rgba(34, 34, 34, 1) 0%,
+    rgba(34, 34, 34, 0.8) 30%,
+    rgba(34, 34, 34, 0.5) 60%,
+    transparent 100%
+  );
+}
+@keyframes flutuar {
   0%,
   100% {
     transform: translateY(0);

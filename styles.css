@@ -6,6 +6,7 @@
   --escuro: #0f172a;
   --maisEscuro: #0a0f1c;
   --claro: #e2e8f0;
+  --vidro: rgba(255, 255, 255, 0.3);
   --vidroEscuro: rgba(255, 255, 255, 0.1);
   --botao: #240d59;
   --botao2: #4a4a4a;
@@ -13,14 +14,14 @@
 }
 
 [data-theme="dark"] {
-  --primaria: #165bee;
+  --primaria: #330867;
   --secundaria: #000000;
   --escuro: #545557;
   --maisEscuro: #e2e8f0;
   --claro: #ffffff;
-  --vidroEscuro: rgba(0, 0, 0, 0.158);
-  --botao: #0077b6;
-  --botao2: #64748b;
+  --vidroEscuro: rgba(0, 0, 0, 0.3);
+  --botao: #4a4a4a;
+  --botao2: #240d59;
   --letras: #0a0f1c;
 }
 
@@ -111,7 +112,7 @@ body {
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  border: 4px solid #6b4b9b;
+  border: var(--secundaria);
   box-shadow: 0 0 10px #6b4b9b;
   animation: flutuar 2s ease-in-out infinite;
   cursor: pointer;
@@ -289,6 +290,12 @@ h1 {
   transition: all 0.5s ease;
 }
 
+.campo-form::placeholder {
+  color: var(--letras); 
+  opacity: 1; 
+}
+
+
 .particulas {
   position: fixed;
   top: 0;
@@ -297,6 +304,7 @@ h1 {
   height: 100%;
   z-index: -1;
   opacity: 0.5;
+  display: block;
   background: radial-gradient(
       circle at 10% 10%,
       var(--primaria) 0%,
@@ -308,11 +316,6 @@ h1 {
     var(--maisEscuro);
 }
 
-.particulas {
-  display: block;
-  /* ou como estiver configurado */
-}
-
 .particulas:not(.ativo) {
   position: fixed;
   top: 0;
@@ -321,7 +324,8 @@ h1 {
   height: 100%;
   z-index: -1;
   opacity: 1;
-  background-image: radial-gradient(#ffffff, #4a4a4a);
+  background-image: linear-gradient(135deg, #b3b3b3, #808080);
+
 }
 
 .wrapper {
@@ -452,16 +456,9 @@ svg {
   padding: 15px 0;
   font-size: 14px;
   font-family: Arial, sans-serif;
-  color: #fff; /* texto branco */
-
-  background: radial-gradient(
-    ellipse at center,
-    rgba(34, 34, 34, 1) 0%,
-    rgba(34, 34, 34, 0.8) 30%,
-    rgba(34, 34, 34, 0.5) 60%,
-    transparent 100%
-  );
+  color: #fff; 
 }
+
 @keyframes flutuar {
   0%,
   100% {

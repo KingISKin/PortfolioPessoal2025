@@ -1,212 +1,431 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-br" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Victor Nunes — FullStack Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="./img/crow.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <div id="google_translate_element"></div>
-
-  <title>João V. Portfólio</title>
 </head>
-
 <body>
-  <div class="particulas"></div>
-  <nav class="navegacao">
-    <ul class="menu">
-      <li>
-        <a href="#inicio" class="menu-link">Início</a>
-      </li>
-      <li>
-        <a href="#sobre" class="menu-link">Sobre</a>
-      </li>
-      <li>
-        <a href="#projetos" class="menu-link">Projetos</a>
-      </li>
-      <li>
-        <a href="#experience" class="menu-link">Experiência</a>
-      </li>
-      <li>
-        <a href="#contatos" class="menu-link">Contato</a>
-      </li>
 
-    </ul>
-  </nav>
+<div class="mesh" id="mesh"></div>
 
-  <main id="inicio" class="cabecalho">
-    <a href="https://www.linkedin.com/in/joão-victor-nunes1/" target="_blank">
-      <img src="./img/JoaoV.jpg" alt="Foto JoaoV" class="foto-perfil" />
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#inicio">João<span>.dev</span></a>
+  <ul class="nav-links">
+    <li><a href="#sobre">sobre</a></li>
+    <li><a href="#projetos">projetos</a></li>
+    <li><a href="#experience">experiência</a></li>
+    <li><a href="#krowncode">krowncode</a></li>
+    <li><a href="#contatos">contato</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="btn-theme" id="btn-theme" title="Alternar tema">
+      <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+    <button class="burger" id="burger"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close"><i class="fas fa-times"></i></button>
+  <a href="#sobre" class="mm-link">sobre</a>
+  <a href="#projetos" class="mm-link">projetos</a>
+  <a href="#experience" class="mm-link">experiência</a>
+  <a href="#krowncode" class="mm-link">krowncode</a>
+  <a href="#contatos" class="mm-link">contato</a>
+</div>
+
+<!-- HERO -->
+<main id="inicio">
+  <div class="hero-left">
+    <div class="hero-tag">🟢 Disponível para projetos</div>
+    <h1 class="hero-h1">
+      João<br>
+      <span class="accent">Victor</span><br>
+      <span class="accent2">Nunes</span>
+    </h1>
+    <p class="hero-sub">Desenvolvedor FullStack & Fundador da KrownCode. Construindo soluções digitais robustas com paixão por código limpo, automação e design.</p>
+    <div class="hero-ctas">
+      <a href="#projetos" class="btn btn-primary"><i class="fas fa-rocket"></i> Ver Projetos</a>
+      <a href="#contatos" class="btn btn-outline"><i class="fas fa-envelope"></i> Contato</a>
+      <a href="https://krowncode.com.br" target="_blank" class="btn btn-outline"><i class="fas fa-crown"></i> KrownCode</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://github.com/KingISKin" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/joão-victor-nunes1/" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://krowncode.com.br" target="_blank" class="social-icon" title="KrownCode"><i class="fas fa-crown"></i></a>
+      <a href="https://wa.me/5511989581698" target="_blank" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="avatar-wrap">
+      <div class="avatar-ring"></div>
+      <div class="avatar-ring2"></div>
+      <img src="./img/JoaoV.jpg" alt="João Victor Nunes" class="avatar-img" />
+    </div>
+    <div class="hero-badge">
+      <div class="badge-item">
+        <div class="badge-num">4+</div>
+        <div class="badge-label">Anos exp.</div>
+      </div>
+      <div class="badge-item">
+        <div class="badge-num">50+</div>
+        <div class="badge-label">Projetos</div>
+      </div>
+      <div class="badge-item">
+        <div class="badge-num">20+</div>
+        <div class="badge-label">Clientes</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- SKILL MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="skill-pill"><i class="fab fa-js"></i>JavaScript</span>
+    <span class="skill-pill"><i class="fab fa-react"></i>React</span>
+    <span class="skill-pill"><i class="fab fa-node-js"></i>Node.js</span>
+    <span class="skill-pill"><i class="fab fa-python"></i>Python</span>
+    <span class="skill-pill"><i class="fas fa-database"></i>PostgreSQL</span>
+    <span class="skill-pill"><i class="fas fa-database"></i>MySQL</span>
+    <span class="skill-pill"><i class="fas fa-leaf"></i>MongoDB</span>
+    <span class="skill-pill"><i class="fab fa-php"></i>PHP</span>
+    <span class="skill-pill"><i class="fas fa-cogs"></i>C#</span>
+    <span class="skill-pill"><i class="fab fa-docker"></i>Docker</span>
+    <span class="skill-pill"><i class="fab fa-git-alt"></i>Git</span>
+    <span class="skill-pill"><i class="fab fa-figma"></i>Figma</span>
+    <span class="skill-pill"><i class="fas fa-robot"></i>RPA / Automação</span>
+    <span class="skill-pill"><i class="fab fa-linux"></i>Kali Linux</span>
+    <span class="skill-pill"><i class="fas fa-coffee"></i>Java</span>
+    <span class="skill-pill"><i class="fas fa-server"></i>REST APIs</span>
+    <!-- duplicate for seamless loop -->
+    <span class="skill-pill"><i class="fab fa-js"></i>JavaScript</span>
+    <span class="skill-pill"><i class="fab fa-react"></i>React</span>
+    <span class="skill-pill"><i class="fab fa-node-js"></i>Node.js</span>
+    <span class="skill-pill"><i class="fab fa-python"></i>Python</span>
+    <span class="skill-pill"><i class="fas fa-database"></i>PostgreSQL</span>
+    <span class="skill-pill"><i class="fas fa-database"></i>MySQL</span>
+    <span class="skill-pill"><i class="fas fa-leaf"></i>MongoDB</span>
+    <span class="skill-pill"><i class="fab fa-php"></i>PHP</span>
+    <span class="skill-pill"><i class="fas fa-cogs"></i>C#</span>
+    <span class="skill-pill"><i class="fab fa-docker"></i>Docker</span>
+    <span class="skill-pill"><i class="fab fa-git-alt"></i>Git</span>
+    <span class="skill-pill"><i class="fab fa-figma"></i>Figma</span>
+    <span class="skill-pill"><i class="fas fa-robot"></i>RPA / Automação</span>
+    <span class="skill-pill"><i class="fab fa-linux"></i>Kali Linux</span>
+    <span class="skill-pill"><i class="fas fa-coffee"></i>Java</span>
+    <span class="skill-pill"><i class="fas fa-server"></i>REST APIs</span>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="inner">
+    <div class="sobre-left reveal">
+      <div class="section-label">// sobre mim</div>
+      <h2 class="section-title">Quem é<br>João Victor?</h2>
+      <div class="sobre-text">
+        <p>Sou desenvolvedor <strong>FullStack</strong> com mais de <strong>4 anos de experiência</strong>, resido em São Paulo — SP. Especializado em criar aplicações web completas, do frontend ao backend, com foco em qualidade, escalabilidade e design.</p>
+        <p>No <strong>frontend</strong>, trabalho com HTML, CSS, JavaScript (ES6+) e React para interfaces modernas e responsivas. No <strong>backend</strong>, desenvolvo APIs RESTful com Node.js, Express, e bancos de dados relacionais (PostgreSQL, MySQL) e NoSQL (MongoDB).</p>
+        <p>Além do desenvolvimento, sou fundador da <strong>KrownCode</strong>, empresa especializada em automação (RPA) e desenvolvimento de sistemas digitais sob medida. Entrego soluções que transformam desafios reais em resultados concretos.</p>
+        <p>Apaixonado por <strong>código limpo</strong>, boas práticas, testes automatizados e arquitetura bem estruturada.</p>
+      </div>
+      <div style="margin-top:2rem;">
+        <a href="https://github.com/KingISKin" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> Ver GitHub</a>
+      </div>
+    </div>
+    <div class="sobre-right reveal reveal-delay-2">
+      <div class="section-label">// habilidades</div>
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:1.5rem;">Proficiência técnica</h3>
+      <div class="skills-grid">
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span class="skill-bar-name">JavaScript / TypeScript</span><span class="skill-bar-pct">92%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.92"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span class="skill-bar-name">React / Frontend</span><span class="skill-bar-pct">88%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.88"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span class="skill-bar-name">Node.js / Express / APIs</span><span class="skill-bar-pct">85%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.85"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span class="skill-bar-name">Python / Automação / RPA</span><span class="skill-bar-pct">82%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.82"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span class="skill-bar-name">PostgreSQL / MySQL / MongoDB</span><span class="skill-bar-pct">80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.80"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span class="skill-bar-name">Docker / DevOps / Cloud</span><span class="skill-bar-pct">70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.70"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span class="skill-bar-name">PHP / C# / Java</span><span class="skill-bar-pct">65%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.65"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <div class="section-label reveal">// projetos</div>
+  <h2 class="section-title reveal">Meus Projetos</h2>
+  <p class="section-desc reveal reveal-delay-1">Uma seleção dos trabalhos que desenvolvi — de landing pages a softwares completos de automação.</p>
+  <div class="projetos-grid">
+
+    <a href="https://leiturify.com.br" target="_blank" class="project-card reveal">
+      <img src="./img/img1.png" alt="Leiturify" class="project-img" />
+      <div class="project-body">
+        <div class="project-tech"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">Landing Page</span></div>
+        <div class="project-name">Leiturify</div>
+        <p class="project-desc">Landing page real desenvolvida para um produto. Foco em conversão de vendas, design limpo e performance.</p>
+      </div>
+      <div class="project-footer"><i class="fas fa-external-link-alt"></i> Visitar site</div>
     </a>
-    <h1>João Santos</h1>
-    <p class="cabecalho-sub-titulo">Desenvolvedor FullStack</p>
-    <div class="buttonGroup">
-      <ul class="wrapper">
-        <button id="btn-theme" class="btn-theme">
-          <span class="icon-wrapper"></span>
-        </button>
-        <li class="icon github">
-          <a href="https://github.com/KingISKin" target="_blank" rel="noopener noreferrer">
-            <span class="tooltip">Github</span>
-            <span><i class="fab fa-github"></i></span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </main>
-  <section id="sobre" class="sobre">
-    <h2 class="sobre-titulo">Sobre Mim</h2>
-    <div class="sobre-caixa">
-      <p class="sobre-paragrafo">
-        Sou desenvolvedor fullstack com 4 anos de experiência, atuando no desenvolvimento de soluções web completas. No
-        front-end, trabalho com HTML, CSS e JavaScript (ES6+), utilizando frameworks como React para criar interfaces
-        modernas e responsivas. No back-end, desenvolvo APIs RESTful robustas utilizando Node.js e Express, além de
-        trabalhar com bancos de dados relacionais como PostgreSQL e MySQL, e também NoSQL como MongoDB.
-      </p>
 
-      <p class="sobre-paragrafo">
-        Também sou familiarizado com práticas essenciais de DevOps, como controle de versão com Git, containerização com
-        Docker e deploy em plataformas cloud. Busco sempre aplicar boas práticas de desenvolvimento, testes
-        automatizados e arquitetura limpa para entregar soluções escaláveis e de alta qualidade, alinhadas às
-        necessidades do negócio!
-      </p>
-
-    </div>
-  </section>
-
-  <section id="projetos" class="projetos">
-    <h2 class="projetos-titulo">Meus Projetos</h2>
-    <div class="projetos-caixa">
-      <a href="https://leiturify.com.br" target="_blank" class="projetos-card">
-        <img src="./img/img1.png" alt="Projeto 1" class="projetos-imagem" />
-        <h3 class="info-projetos">leiturify</h3>
-        <div class="caixa-textos-projeto">
-          <p class="paragrafo-projetos">
-            Projeto real desenvolvido para um produto. Uma landing page simples, com foco principal em vendas.
-          </p>
-          <p class="paragrafo-projetos">
-            Clique para ver mais!
-          </p>
-        </div>
-      </a>
-      <a href="https://kingiskin.github.io/ProvavelKrownCode" target="_blank" class="projetos-card">
-        <img src="./img/img2.png" alt="Projeto 2" class="projetos-imagem" />
-        <h3 class="info-projetos">KrownCode</h3>
-        <div class="caixa-textos-projeto">
-          <p class="paragrafo-projetos">
-            Site corporativo para empresas, com principal foco em demonstrativos visuais, sejam gráficos, dados e até imagens.
-          </p>
-          <p class="paragrafo-projetos">
-            Clique para ver mais!
-          </p>
-        </div>
-      </a>
-      <a href="https://kingiskin.github.io/GymTry" target="_blank" class="projetos-card">
-        <img src="./img/img3.png" alt="Projeto 3" class="projetos-imagem" />
-        <h3 class="info-projetos">Rede de Academias</h3>
-        <div class="caixa-textos-projeto">
-          <p class="paragrafo-projetos">
-            Site corporativo para academias e lojas do segmento, criado com objetivo de nichar os projetos de para trabalhar ações em específico. Como Backend, cleancode e a própria responsividade.
-          <p class="paragrafo-projetos">
-            Clique para ver mais!
-          </p>
-        </div>
-      </a>
-      <a href="https://github.com/KingISKin/SoftwareManipuladorDeImagens.git" target="_blank" class="projetos-card">
-        <img src="./img/img4.png" alt="Projeto 4" class="projetos-imagem" />
-        <h3 class="info-projetos">Software Manipulador De Imagens</h3>
-        <div class="caixa-textos-projeto">
-          <p class="paragrafo-projetos">
-           Projeto com objetivo de automação comercial, leitura de dados via IA, tratamento de dados via python e gerenciamento de dados.
-          <p class="paragrafo-projetos">
-            Clique para ver mais!
-          </p>
-        </div>
-      </a>
-      <a href="https://kingiskin.github.io/PaginadeLogin-main" target="_blank" class="projetos-card">
-        <img src="./img/img5.png" alt="Projeto 5" class="projetos-imagem" />
-        <h3 class="info-projetos">Página de Login</h3>
-        <div class="caixa-textos-projeto">
-          <p class="paragrafo-projetos">
-           Página de login basica, com objetivo de praticar backend, em andamento, mas com bom frontend
-          <p class="paragrafo-projetos">
-            Clique para ver mais!
-          </p>
-        </div>
-      </a>
-      <a href="https://github.com/KingISKin/DashBoardsPY-main" target="_blank" class="projetos-card">
-        <img src="./img/img6.png" alt="Projeto 6" class="projetos-imagem" />
-        <h3 class="info-projetos">Gestão NOC</h3>
-        <div class="caixa-textos-projeto">
-          <p class="paragrafo-projetos">
-           Software com objetivo de tornar o trabalho NOC pratico e eficiente. Com possibilidade de operar online com login e senha.
-           Realiza backup, tratamento de dados e cria dashs interativos. Nesse caso, um protótipo.
-          <p class="paragrafo-projetos">
-            Clique para ver mais!
-          </p>
-        </div>
-      </a>
-    </div>
-    
-    </div>
-  </section>
-
-  <section id="experience" class="experience">
-    <h2 class="projetos-titulo">Experiência</h2>
-    <div class="projetos-caixa">
-      <a href="https://www.sonda.com/pt/inicio" target="_blank" class="projetos-card">
-        <img src="./img/sonda.png" alt="Projeto 1" class="projetos-imagem" />
-        <h3 class="info-projetos">Sonda IT</h3>
-        <div class="caixa-textos-projeto">
-          <p class="paragrafo-projetos">
-            Analista de ServiceDesk Júnior, suporte técnico aos usuários, resolvendo problemas de acesso, sistemas, rede
-            e equipamentos. Faço atendimento de chamados, reset de senhas, desbloqueios e oriento no uso das
-            ferramentas.
-          </p>
-        </div>
-      </a>
-      <a href="https://digitalpoint.com.br" target="_blank" class="projetos-card">
-        <img src="./img/DigitalPoint.png" alt="Projeto 1" class="projetos-imagem" />
-        <h3 class="info-projetos">Digital Point</h3>
-        <div class="caixa-textos-projeto">
-          <p class="paragrafo-projetos">
-            Desenvolvedor FullStack Pleno. Desenvolvo aplicações web completas, atuando tanto no frontend quanto no
-            backend. Crio interfaces, APIs, banco de dados e garanto a integração e funcionamento de todo o sistema
-          </p>
-        </div>
-      </a>
-      <a href="https://www.colegiopentagono.com" target="_blank" class="projetos-card">
-        <img src="./img/ColegioPentagono.png" alt="Projeto 1" class="projetos-imagem" />
-        <h3 class="info-projetos">Colégio Pentágono</h3>
-        <div class="caixa-textos-projeto">
-          <p class="paragrafo-projetos">
-            Analista HelpDesk Júnior. Atuei no suporte a servidores, rede, infraestrutura e atendimento aos usuários,
-            além de auxiliar a equipe na resolução de incidentes e na manutenção dos ambientes.
-          </p>
-        </div>
-      </a>
-    </div>
-    </div>
-  </section>
-
-  <section id="contatos" class="contatos">
-    <h2 class="contatos-titulo">Entre em contato</h2>
-    <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-      <div class="grupo-form">
-        <input placeholder="Nome" class="campo-form" id="nome" />
+    <a href="https://kingiskin.github.io/GymTry" target="_blank" class="project-card reveal reveal-delay-2">
+      <img src="./img/img3.png" alt="Rede de Academias" class="project-img" />
+      <div class="project-body">
+        <div class="project-tech"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Backend</span><span class="tag">Responsivo</span></div>
+        <div class="project-name">Rede de Academias</div>
+        <p class="project-desc">Site corporativo para academias e lojas do segmento, explorando backend, clean code e responsividade avançada.</p>
       </div>
+      <div class="project-footer"><i class="fas fa-external-link-alt"></i> Ver projeto</div>
+    </a>
 
-      <div class="grupo-form">
-        <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem" rows="4"></textarea>
+    <a href="https://github.com/KingISKin/SoftwareManipuladorDeImagens" target="_blank" class="project-card reveal">
+      <img src="./img/img4.png" alt="Software Manipulador de Imagens" class="project-img" />
+      <div class="project-body">
+        <div class="project-tech"><span class="tag">Python</span><span class="tag">IA</span><span class="tag">Automação</span><span class="tag">RPA</span></div>
+        <div class="project-name">Software Manipulador de Imagens</div>
+        <p class="project-desc">Automação comercial com leitura de dados via IA, tratamento em Python e gerenciamento automatizado de imagens.</p>
       </div>
-      <button type="submit" class="botao-form">Enviar para Whatsapp</button>
-    </form>
-  </section>
-  <script src="./main.js"></script>
-</body>
-<footer class="footer">
-  <p>© 2025 KingISKin</p>
+      <div class="project-footer"><i class="fab fa-github"></i> Ver no GitHub</div>
+    </a>
+
+    <a href="https://kingiskin.github.io/PaginadeLogin-main" target="_blank" class="project-card reveal reveal-delay-1">
+      <img src="./img/img5.png" alt="Página de Login" class="project-img" />
+      <div class="project-body">
+        <div class="project-tech"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Backend</span></div>
+        <div class="project-name">Página de Login</div>
+        <p class="project-desc">Sistema de login com foco em backend seguro. Frontend moderno, em desenvolvimento com autenticação completa.</p>
+      </div>
+      <div class="project-footer"><i class="fas fa-external-link-alt"></i> Ver projeto</div>
+    </a>
+
+    <a href="https://github.com/KingISKin/DashBoardsPY-main" target="_blank" class="project-card reveal reveal-delay-2">
+      <img src="./img/img6.png" alt="Gestão NOC" class="project-img" />
+      <div class="project-body">
+        <div class="project-tech"><span class="tag">Python</span><span class="tag">Dashboard</span><span class="tag">NOC</span><span class="tag">Login</span></div>
+        <div class="project-name">Gestão NOC</div>
+        <p class="project-desc">Software NOC com login/senha online, backup automatizado, tratamento de dados e dashboards interativos. Protótipo funcional.</p>
+      </div>
+      <div class="project-footer"><i class="fab fa-github"></i> Ver no GitHub</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- EXPERIÊNCIA -->
+<section id="experience">
+  <div class="section-label reveal">// experiência</div>
+  <h2 class="section-title reveal">Minha Trajetória</h2>
+  <p class="section-desc reveal reveal-delay-1">Empresas e projetos que moldaram minha visão como desenvolvedor e profissional de TI.</p>
+  <div class="timeline">
+
+    <div class="tl-item reveal">
+      <div class="tl-dot">
+        <img src="./img/madnezz.png" alt="Digital Point" onerror="this.style.display='none';this.parentNode.innerHTML='<i class=\'fas fa-code\' style=\'color:var(--accent)\'></i>'"/>
+      </div>
+      <div class="tl-content">
+        <div class="tl-period">Atual</div>
+        <div class="tl-role">Desenvolvedor FullStack Pleno</div>
+        <div class="tl-company">Madnezz — madnezz.com.br</div>
+        <p class="tl-desc">Desenvolvimento de aplicações web completas, atuando no frontend e backend. Criação de interfaces, APIs RESTful, Laravel, modelagem de banco de dados e integração de sistemas. Responsável pelo funcionamento ponta-a-ponta das aplicações entregues aos clientes.</p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal reveal-delay-1">
+      <div class="tl-dot">
+        <img src="./img/DigitalPoint.png"alt="Sonda IT" onerror="this.style.display='none';this.parentNode.innerHTML='<i class=\'fas fa-headset\' style=\'color:var(--accent)\'></i>'"/>
+      </div>
+     <div class="tl-content">
+        <div class="tl-period">Experiência anterior</div>
+        <div class="tl-role">Desenvolvedor FullStack Pleno</div>
+        <div class="tl-company">Digital Point — digitalpoint.com.br</div>
+        <p class="tl-desc">Desenvolvimento de aplicações web completas, atuando no frontend e backend. Criação de interfaces, APIs RESTful, modelagem de banco de dados e integração de sistemas. Responsável pelo funcionamento ponta-a-ponta das aplicações entregues aos clientes.</p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal reveal-delay-1">
+      <div class="tl-dot">
+        <img src="./img/sonda.png" alt="Sonda IT" onerror="this.style.display='none';this.parentNode.innerHTML='<i class=\'fas fa-headset\' style=\'color:var(--accent)\'></i>'"/>
+      </div>
+      <div class="tl-content">
+        <div class="tl-period">Experiência anterior</div>
+        <div class="tl-role">Analista de ServiceDesk Júnior</div>
+        <div class="tl-company">Sonda IT — sonda.com/pt</div>
+        <p class="tl-desc">Suporte técnico a usuários corporativos — resolução de problemas de acesso, sistemas, rede e equipamentos. Atendimento de chamados, reset de senhas, desbloqueios e orientação no uso das ferramentas e plataformas.</p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal reveal-delay-2">
+      <div class="tl-dot">
+        <img src="./img/ColegioPentagono.png" alt="Colégio Pentágono" onerror="this.style.display='none';this.parentNode.innerHTML='<i class=\'fas fa-school\' style=\'color:var(--accent)\'></i>'"/>
+      </div>
+      <div class="tl-content">
+        <div class="tl-period">Experiência anterior</div>
+        <div class="tl-role">Analista HelpDesk Júnior</div>
+        <div class="tl-company">Colégio Pentágono — colegiopentagono.com</div>
+        <p class="tl-desc">Suporte a servidores, rede e infraestrutura. Atendimento aos usuários e auxílio à equipe na resolução de incidentes críticos e na manutenção de ambientes de TI educacional.</p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal reveal-delay-3">
+      <div class="tl-dot" style="background: linear-gradient(135deg,rgba(0,229,255,0.15),rgba(124,58,255,0.15)); border-color: var(--accent);">
+        <i class="fas fa-crown" style="color:var(--accent); font-size:1.1rem;"></i>
+      </div>
+      <div class="tl-content" style="border-color: rgba(0,229,255,0.2); background: rgba(0,229,255,0.03);">
+        <div class="tl-period">🚀 Fundador</div>
+        <div class="tl-role">CEO & Desenvolvedor Principal</div>
+        <div class="tl-company">KrownCode — krowncode.com.br</div>
+        <p class="tl-desc">Fundação e gestão da KrownCode, empresa de desenvolvimento e automação. Mais de 50 projetos entregues, 20+ clientes ativos e suporte 24/7. Desenvolvimento de soluções RPA, e-commerce, sites institucionais e sistemas sob medida.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- KROWNCODE -->
+<section id="krowncode">
+  <div class="krown-inner">
+    <div class="krown-left reveal">
+      <div class="section-label">// empresa</div>
+      <h2 class="section-title">KrownCode</h2>
+      <p class="section-desc">Tecnologia que impulsiona resultados reais.</p>
+
+      <div class="krown-card">
+        <div>
+          <div class="krown-logo-text">Krown<span>Code</span></div>
+          <p class="krown-tagline">Especializada em automação de processos (RPA) e desenvolvimento de sistemas digitais sob medida. Missão: simplificar a tecnologia para que o negócio foque no que importa.</p>
+        </div>
+        <div class="krown-services">
+          <div class="kservice">
+            <div class="kservice-icon">🤖</div>
+            <div class="kservice-name">Automação RPA</div>
+          </div>
+          <div class="kservice">
+            <div class="kservice-icon">💻</div>
+            <div class="kservice-name">Dev sob medida</div>
+          </div>
+          <div class="kservice">
+            <div class="kservice-icon">🔗</div>
+            <div class="kservice-name">Integrações</div>
+          </div>
+          <div class="kservice">
+            <div class="kservice-icon">🛡️</div>
+            <div class="kservice-name">Suporte 24/7</div>
+          </div>
+        </div>
+        <div class="krown-stats">
+          <div class="kstat"><div class="kstat-num">50+</div><div class="kstat-label">Projetos</div></div>
+          <div class="kstat"><div class="kstat-num">20+</div><div class="kstat-label">Clientes/mês</div></div>
+          <div class="kstat"><div class="kstat-num">7+</div><div class="kstat-label">Anos exp.</div></div>
+          <div class="kstat"><div class="kstat-num">24/7</div><div class="kstat-label">Suporte</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="krown-right reveal reveal-delay-2">
+      <div class="section-label">// o que fazemos</div>
+      <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:1.5rem;letter-spacing:-0.02em;">Soluções que<br>transformam negócios</h3>
+      <p>A KrownCode desenvolve <strong>sistemas, sites e automações</strong> que geram resultados reais. Nossa abordagem integra tecnologia, design e estratégia para entregar soluções escaláveis e seguras.</p>
+      <p>Trabalhamos com <strong>e-commerce de alta performance</strong> integrado aos principais meios de pagamento, <strong>sites institucionais</strong> que comunicam a marca com clareza, e <strong>automação de processos</strong> que elimina tarefas repetitivas e aumenta a produtividade.</p>
+      <p>Mais de <strong>20 empresas</strong> confiam nas nossas soluções todo mês. Suporte contínuo 24/7, entrega com transparência e parceria real com cada cliente.</p>
+      <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="https://krowncode.com.br" target="_blank" class="btn btn-primary"><i class="fas fa-crown"></i> Conhecer empresa</a>
+        <a href="https://krowncode.com.br/contact.html" target="_blank" class="btn btn-outline"><i class="fas fa-calendar"></i> Agendar reunião</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contatos">
+  <div class="section-label reveal">// contato</div>
+  <h2 class="section-title reveal">Vamos conversar?</h2>
+  <div class="contato-wrap">
+    <div class="contato-info reveal">
+      <p style="font-family:var(--mono);font-size:0.88rem;color:var(--muted);line-height:1.8;margin-bottom:2rem;">Aberto a projetos freelance, oportunidades de emprego e parcerias. Se tem um projeto em mente, entre em contato!</p>
+      <a href="https://wa.me/5511989581698" target="_blank" class="contato-item">
+        <div class="contato-item-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="contato-item-text">
+          <div class="contato-item-label">WhatsApp</div>
+          <div class="contato-item-val">+55 (11) 98958-1698</div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/joão-victor-nunes1/" target="_blank" class="contato-item">
+        <div class="contato-item-icon"><i class="fab fa-linkedin-in"></i></div>
+        <div class="contato-item-text">
+          <div class="contato-item-label">LinkedIn</div>
+          <div class="contato-item-val">João Victor Nunes</div>
+        </div>
+      </a>
+      <a href="https://github.com/KingISKin" target="_blank" class="contato-item">
+        <div class="contato-item-icon"><i class="fab fa-github"></i></div>
+        <div class="contato-item-text">
+          <div class="contato-item-label">GitHub</div>
+          <div class="contato-item-val">@KingISKin</div>
+        </div>
+      </a>
+      <a href="https://krowncode.com.br" target="_blank" class="contato-item">
+        <div class="contato-item-icon"><i class="fas fa-crown"></i></div>
+        <div class="contato-item-text">
+          <div class="contato-item-label">Empresa</div>
+          <div class="contato-item-val">krowncode.com.br</div>
+        </div>
+      </a>
+      <div class="contato-item" style="cursor:default;">
+        <div class="contato-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="contato-item-text">
+          <div class="contato-item-label">Localização</div>
+          <div class="contato-item-val">São Paulo — SP, Brasil</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-card reveal reveal-delay-2">
+      <div class="section-label" style="margin-bottom:1rem;">// enviar mensagem</div>
+      <form id="formulario" onsubmit="enviarWhats(event)">
+        <div class="form-group">
+          <label class="form-label">Nome</label>
+          <input class="form-input" id="nome" placeholder="Seu nome completo" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensagem</label>
+          <textarea class="form-textarea" id="mensagem" placeholder="Conta sobre o seu projeto ou oportunidade..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit"><i class="fab fa-whatsapp"></i> &nbsp;Enviar via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <script src="script.js"></script>
+  <div class="footer-copy">© 2026 <span>KingISKin</span> — João Victor Nunes. Todos os direitos reservados.</div>
+  <div class="footer-copy">You know how we do it.</div>
 </footer>
 
+</body>
 </html>

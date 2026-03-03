@@ -306,16 +306,30 @@
      height: 280px;
  }
 
- .avatar-ring {
-     position: absolute;
-     inset: -12px;
-     border-radius: 50%;
-     border: 2px solid transparent;
-     background: linear-gradient(var(--bg), var(--bg)) padding-box,
-         linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3)) border-box;
-     animation: spinRing 8s linear infinite;
- }
+.avatar-ring {
+    position: absolute;
+    inset: -12px;
+    border-radius: 50%;
+    padding: 4px; /* espessura da borda */
 
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 300deg,
+        rgba(0, 229, 255, 0.9) 330deg,
+        rgba(0, 229, 255, 1) 350deg,
+        transparent 360deg
+    );
+
+    /* transforma em BORDA real */
+    -webkit-mask: 
+        radial-gradient(farthest-side, transparent calc(100% - 4px), white 100%);
+    mask: 
+        radial-gradient(farthest-side, transparent calc(100% - 4px), white 100%);
+
+    filter: blur(4px); /* efeito LED */
+    animation: spinLed 2s linear infinite;
+}
  .avatar-ring2 {
      position: absolute;
      inset: -22px;
@@ -324,11 +338,11 @@
      animation: spinRing 12s linear infinite reverse;
  }
 
- @keyframes spinRing {
-     to {
-         transform: rotate(360deg);
-     }
- }
+@keyframes spinLed {
+    to {
+        transform: rotate(360deg);
+    }
+}
 
  .avatar-img {
      width: 100%;
@@ -337,7 +351,7 @@
      object-fit: cover;
      display: block;
      box-shadow: 0 0 60px rgba(0, 229, 255, 0.2);
-     animation: float 4s ease-in-out infinite;
+
  }
 
  @keyframes float {

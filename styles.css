@@ -25,13 +25,13 @@
  }
 
  [data-theme="light"] {
-     --bg: #f0f2f8;
-     --bg2: #e2e5f0;
+     --bg: #f1e9d9;
+     --bg2: #a5a27800;
      --surface: rgba(0, 0, 0, 0.04);
      --border: rgba(0, 0, 0, 0.08);
      --text: #111827;
      --muted: #6b7280;
-     --glow: 0 0 40px rgba(124, 58, 255, 0.12);
+     --glow: 0 0 40px rgba(84, 42, 170, 0.12);
  }
 
  html {
